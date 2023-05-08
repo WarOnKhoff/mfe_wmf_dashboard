@@ -7,7 +7,7 @@ const HOST_URL = process.env.HOST_URL || "http://localhost:8080"
 const deps = require("./package.json").dependencies
 module.exports = (_, argv) => ({
 	output: {
-		publicPath: DASHBOARD_URL
+		publicPath: `${DASHBOARD_URL}/`
 	},
 
 	resolve: {
