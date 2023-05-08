@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
+		"deploy": "gh-pages -d dist",
 		"build": "webpack --mode production",
 		"build:dev": "webpack --mode development",
 		"build:start": "cd dist && PORT=3001 npx serve",
