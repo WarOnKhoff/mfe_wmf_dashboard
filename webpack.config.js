@@ -2,11 +2,12 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin")
 require("dotenv").config()
 
+const DASHBOARD_URL = process.env.DASHBOARD_URL || "http://localhost:3001"
 const HOST_URL = process.env.HOST_URL || "http://localhost:8080"
 const deps = require("./package.json").dependencies
 module.exports = (_, argv) => ({
 	output: {
-		publicPath: "http://localhost:3001/"
+		publicPath: DASHBOARD_URL
 	},
 
 	resolve: {
